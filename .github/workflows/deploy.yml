@@ -37,4 +37,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           publish_branch: gh-pages
-          force_orphan: true
+          force_orphan: false
+          # 自定义域名 CNAME 由 public/CNAME 随 dist 发布，避免 force_orphan 抹除
